@@ -35,7 +35,11 @@ for index, row in df.iterrows():
 
     html_body = f"""
     <html>
-    <body style="font-family: Arial, sans-serif; color: #333;">
+    <body style="font-family: Arial, sans-serif; color: #333; line-height: 1.6;">
+
+        <p><strong>Opportunity Type:</strong> Internship</p>
+        <p><strong>Duration:</strong> 1–3 months (flexible)</p>
+
         <p>Dear {name} Sir/Ma'am,</p>
 
         <p>
@@ -69,6 +73,7 @@ for index, row in df.iterrows():
             <a href="https://linkedin.com/in/mihir2005">linkedin.com/in/mihir2005</a><br>
             <a href="https://github.com/Mihirkool">github.com/Mihirkool</a>
         </p>
+
     </body>
     </html>
     """
