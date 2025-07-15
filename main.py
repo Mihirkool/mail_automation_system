@@ -24,12 +24,22 @@ server.login(EMAIL_ADDRESS, EMAIL_PASSWORD)
 with open('Mihir_Kulkarni_Resume.pdf', 'rb') as f:
     resume_data = f.read()
 
+# Track emails already sent to
+sent_emails = set()
+
 # Send one-by-one
 for index, row in df.iterrows():
     name = row['name']
     email = row['email']
     company = row['company']
     designation = row['designation'] if 'designation' in row and not pd.isna(row['designation']) else 'your team'
+
+    # Skip duplicate emails
+    if email in sent_emails:
+        print(f"⚠️ Skipping duplicate: {email}")
+        continue
+
+    sent_emails.add(email)
 
     subject = "Internship Application – Mihir Kulkarni | Data & Design Driven"
 
