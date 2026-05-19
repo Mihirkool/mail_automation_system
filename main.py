@@ -13,7 +13,7 @@ from email.mime.application import MIMEApplication
 # SETTINGS
 # ==============================
 
-CONTACTS_FILE = "contacts 2.xlsx"
+CONTACTS_FILE = "Sample.xlsx"
 RESUME_FILE = "Mihir_Kulkarni_Resume.pdf"
 
 DELAY_SECONDS = 8
